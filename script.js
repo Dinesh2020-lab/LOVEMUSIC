@@ -131,4 +131,4 @@ audio.addEventListener('ended', () => {
 // Initialize app
 createPlaylist();
 loadSong(0);
-</script>
+
