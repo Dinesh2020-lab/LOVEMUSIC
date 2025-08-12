@@ -1,32 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spotify Clone</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="player-container">
-    <div class="player">
-      <div class="now-playing">
-        <div id="song-title">Select a song</div>
-        <div id="song-artist"></div>
-      </div>
-      <audio id="audio"></audio>
-      <div class="controls">
-        <button id="prev" title="Previous">&#9664;&#9664;</button>
-        <button id="play" title="Play/Pause">&#9654;</button>
-        <button id="next" title="Next">&#9654;&#9654;</button>
-      </div>
-      <div class="progress-container">
-        <input type="range" id="progress" value="0" min="0" max="100" />
-      </div>
-    </div>
-
-    <ul id="playlist" class="playlist"></ul>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Music App</title>
+  </head>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
