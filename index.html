@@ -1,12 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React Music App</title>
-  </head>
-  <body class="bg-gray-900">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header>
+    <div class="logo">🎵 MyMusic</div>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">Search</a>
+      <a href="#">Library</a>
+      <a href="#">Premium</a>
+    </nav>
+  </header>
+
+  <!-- Search Section -->
+  <div class="search">
+    <input type="text" id="searchBox" placeholder="What do you want to listen to?">
+    <button onclick="searchSong()">🔍</button>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h3>Trending Now</h3>
+      <div class="card-container">
+        <div class="card" onclick="playSong('songs/song1.mp3','Ballari Bava')">
+          <img src="images/song1.jpg" alt="Ballari Bava">
+          <p>Ballari Bava</p>
+        </div>
+        <div class="card" onclick="playSong('songs/song2.mp3','Dilbar')">
+          <img src="images/song2.jpg" alt="Dilbar">
+          <p>Dilbar</p>
+        </div>
+        <div class="card" onclick="playSong('songs/song3.mp3','Magadheera')">
+          <img src="images/song3.jpg" alt="Magadheera">
+          <p>Magadheera</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Jump Back In</h3>
+      <div class="card-container">
+        <div class="card" onclick="playSong('songs/song4.mp3','Attarintiki Daredi')">
+          <img src="images/song4.jpg" alt="Attarintiki Daredi">
+          <p>Attarintiki Daredi</p>
+        </div>
+        <div class="card" onclick="playSong('songs/song5.mp3','Dariponthothundu')">
+          <img src="images/song5.jpg" alt="Dariponthothundu">
+          <p>Dariponthothundu</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom Music Player -->
+  <footer>
+    <div id="songTitle">🎶 Select a song to play</div>
+    <audio id="audioPlayer" controls></audio>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
