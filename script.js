@@ -1,15 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+let audioPlayer = document.getElementById("audioPlayer");
+let songTitle = document.getElementById("songTitle");
 
-/* Optional custom scroll styling */
-::-webkit-scrollbar {
-  width: 8px;
+function playSong(file, title) {
+  audioPlayer.src = file;
+  audioPlayer.play();
+  songTitle.textContent = "▶️ Now Playing: " + title;
 }
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.4);
+
+function searchSong() {
+  let query = document.getElementById("searchBox").value.toLowerCase();
+  alert("Search feature coming soon!\nYou typed: " + query);
 }
